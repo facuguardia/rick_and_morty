@@ -4,7 +4,7 @@ import Landing from "../pages/LandingPage";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Detail from "../pages/Detail";
-import Contact from "../pages/Contact";
+import Contac from "../pages/Contac";
 import NotFound from "../pages/NotFound";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/contact" element={<Contac />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

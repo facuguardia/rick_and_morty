@@ -6,7 +6,6 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 function Home() {
-
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.characters);
 
@@ -15,21 +14,23 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <Nav />
-      <h1>Characters</h1>
-      {
-        characters.map((character) => (
+    <div className="bg-primary">
+      <div>
+        <Nav />
+      </div>
+      <div className="grid grid-cols-4 gap-5">
+        {characters.map((character) => (
           <Cards
             key={character?.id}
             id={character?.id}
             name={character?.name}
-            gender={character?.gender}
             image={character?.image}
           />
-        ))
-      }
-      <Footer />
+        ))}
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
